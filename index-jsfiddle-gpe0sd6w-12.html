@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle gpe0sd6w</title>
+
+  <style>
+    body{
+margin:0;
+font-family:"Segoe UI",sans-serif;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)),
+url("https://www.sabaiatkan.com/wp-content/uploads/2014/11/erawan-waterfall-3.jpg");
+background-size:cover;
+background-attachment:fixed;
+}
+
+/* navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background:linear-gradient(90deg,#000,#1b5e20);
+}
+
+.navbar ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.navbar li{
+cursor:pointer;
+}
+
+/* hero */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero-buttons{
+margin-top:20px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+/* pages */
+
+.page{
+display:none;
+padding:40px;
+max-width:1000px;
+margin:auto;
+}
+
+.page.active{
+display:block;
+}
+
+/* grid */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+/* card */
+
+.card{
+background:rgba(0,0,0,0.6);
+padding:15px;
+border-radius:12px;
+}
+
+/* images */
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+/* button */
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:linear-gradient(45deg,#2e7d32,#66bb6a);
+color:white;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:center;
+gap:10px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+  </style>
+
+  
+</head>
+<body>
+  <nav class="navbar">
+<div class="logo">Erawan 888</div>
+
+<ul>
+<li onclick="showPage('home')">หน้าแรก</li>
+<li onclick="showPage('about')">เกี่ยวกับค่าย</li>
+<li onclick="showPage('activities')">กิจกรรม</li>
+<li onclick="showPage('gallery')">แกลเลอรี</li>
+<li onclick="showPage('contact')">ผู้จัดทำ</li>
+</ul>
+</nav>
+
+<header class="hero">
+<h1>ค่ายอนุรักษ์สิ่งแวดล้อม</h1>
+<p>ศึกษาธรรมชาติ ณ น้ำตกเอราวัณ</p>
+
+<div class="hero-buttons">
+<button onclick="showPage('about')">รู้จักค่าย</button>
+<button onclick="showPage('activities')">ดูกิจกรรม</button>
+<button onclick="showPage('gallery')">ดูรูปภาพ</button>
+</div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page">
+<h2>ยินดีต้อนรับ</h2>
+<p>
+เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำค่ายอนุรักษ์สิ่งแวดล้อม
+และกิจกรรมที่ช่วยสร้างจิตสำนึกในการดูแลธรรมชาติ
+</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+<h2>เกี่ยวกับค่าย</h2>
+
+<img src="https://s359.kapook.com/pagebuilder/e670daa6-c52e-40ca-9efa-162946cf5e0d.jpg">
+
+<p>
+ค่ายจัดขึ้นบริเวณน้ำตกเอราวัณ จังหวัดกาญจนบุรี
+เป็นสถานที่ธรรมชาติที่มีความสวยงามและเหมาะแก่การศึกษา
+เกี่ยวกับระบบนิเวศและการอนุรักษ์สิ่งแวดล้อม
+</p>
+
+<button onclick="showPage('activities')">ดูรายละเอียดกิจกรรม</button>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="page">
+
+<h2>กิจกรรมภายในค่าย</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://i.ibb.co/B2WGRbZt/2.jpg">
+<h3>กิจกรรมเดินป่าเล่นน้ำตก</h3>
+<p>เดินชมศิกษาธรรมชาติและเล่นน้ำตกชั้นเด็ด 7 ย่านน้ำ</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/Ngz8gdRc/3.jpg">
+<h3>กิจกรรมนอนดูดาว</h3>
+<p>ศึกษาดวงดาวต่างๆ เช่น ดาวนายพราน</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/b5BN9t5P/1.jpg">
+<h3>จุดเทียนร่วมดวงใจ</h3>
+<p>ให้ข้อคิดเกี่ยวกับการอนุรักษ์ป่า่ไม้</p>
+</div>
+
+</div>
+
+<button onclick="showPage('gallery')">ดูภาพกิจกรรม</button>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="page">
+
+<h2>แกลเลอรี</h2>
+
+<div class="grid">
+
+<img src="https://i.ibb.co/3yHbTnwn/image.jpg">
+<img src="https://i.ibb.co/3m7T106v/2.jpg">
+<img src="https://i.ibb.co/Tx4tygyR/3.jpg">
+<img src="https://i.ibb.co/4wY8R46d/4.jpg">
+
+</div>
+
+<button onclick="showPage('contact')">ผู้จัดทำ</button>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+
+<h2>ผู้พัฒนาเว็บไซต์</h2>
+
+<p>ชื่อกลุ่ม : Green Heart Camp</p>
+<p>โครงการเว็บไซต์ค่ายอนุรักษ์สิ่งแวดล้อม</p>
+
+<button onclick="joinCamp()">ติดต่อสอบถาม</button>
+
+</section>
+
+  <script>
+    function showPage(page){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
+})
+
+document.getElementById(page).classList.add("active")
+
+window.scrollTo(0,0)
+
+}
+
+showPage("home")
+
+function joinCamp(){
+alert("ขอบคุณที่สนใจค่ายอนุรักษ์ธรรมชาติ 🌿")
+}
+  </script>
+</body>
+</html>
